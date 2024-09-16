@@ -165,7 +165,7 @@ def run(args):
     # we print all but the last line which is the +---+ separator
     for line in lines_to_print[:-1]:
         if "MiB" in line:
-            total_gpu_vram += int(line.split()[10].replace("MiB", ""))
+            total_gpu_vram += int(line.split()[-5].replace("MiB", ""))
         print(line)
 
     no_running_process = "No running processes found"
